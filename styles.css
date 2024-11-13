@@ -14,7 +14,8 @@ body, html {
 }
 
 img {
-    width: 100px;
+    width: 100%;
+    height: auto;
 }
 
 /* ------------- HERO SECTION --------------- */
@@ -26,7 +27,7 @@ img {
     justify-content: center;
     align-items: center;
     color: white;
-    padding: 0.1rem;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -50,16 +51,15 @@ img {
     z-index: 1;
     background-color: #FFD60A;
     color: black;
-    padding: 1.5rem 3rem;
+    padding: 1rem 2rem;
     font-weight: bold;
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin: 0;
 }
 
 .hero h2 {
     position: absolute;
     width: 100%;
-    max-width: 100vw; /* Prevents overflow */
     bottom: 0;
     margin: 0;
     text-align: center;
@@ -67,15 +67,15 @@ img {
     background-color: #FFD60A;
     color: black;
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 /* ------------- ACTIVITIES SECTION --------------- */
 .activities-sec {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* allows wrapping */
     justify-content: center;
-    align-items: flex-start; /* Aligns items at the top */
+    align-items: flex-start;
     margin: 0;
     width: 100%;
 }
@@ -96,8 +96,8 @@ img {
 
 .activities-img {
     margin: 1rem;
-    width: 600px;
-    height: 400px;
+    width: 100%; /* makes images responsive */
+    max-width: 600px; /* ensures images don't get too large */
 }
 
 .activities-img:hover {
@@ -121,7 +121,7 @@ img {
 
 /* ------------- GUIDE SECTION --------------- */
 .guide-container {
-    padding: 6rem 40rem;
+    padding: 6rem 2rem; /* Adjust padding for responsiveness */
 }
 
 .guide {
@@ -130,14 +130,16 @@ img {
     justify-content: center;
     border: 5px solid #FFD60A;
     border-bottom: 50px solid #FFD60A;
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 1rem;
+    flex-wrap: wrap; /* allows wrapping */
 }
 
 .guide-pro {
     border: 5px solid #FFD60A;
-    height: 500px;
-    width: 400px;
+    width: 100%; /* Makes image responsive */
+    max-width: 400px;
     margin-right: 2rem;
+    height: auto;
 }
 
 .guide-intro {
@@ -161,4 +163,56 @@ img {
 .guide-name {
     font-size: 2rem;
     margin-top: 0;
+}
+
+/* ------------- MEDIA QUERIES --------------- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem; /* Smaller font size */
+    }
+
+    .hero h2 {
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    .activities-sec {
+        flex-direction: column; /* Stack images vertically */
+    }
+
+    .activities-img {
+        width: 100%; /* Full-width images on smaller screens */
+    }
+
+    .guide-container {
+        padding: 4rem 2rem; /* Reduced padding */
+    }
+
+    .guide {
+        flex-direction: column; /* Stack the guide content */
+        align-items: center;
+    }
+
+    .guide-pro {
+        margin-bottom: 2rem; /* Space between image and text */
+        width: 100%; /* Responsive image size */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .activities-h3 {
+        font-size: 2rem; /* Adjust font size */
+    }
+
+    .guide-catch {
+        font-size: 2rem; /* Adjust font size */
+    }
+
+    .guide-des {
+        font-size: 1.2rem; /* Smaller text */
+    }
+
+    .guide-name {
+        font-size: 1.5rem; /* Smaller text */
+    }
 }
