@@ -1,9 +1,10 @@
-/* Apply box-sizing globally to include padding and borders in element widths */
+/* Apply box-sizing globally to include padding and borders in element widths*/
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
+
 
 body, html {
     margin: 0;
@@ -26,7 +27,6 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     padding: 1rem;
     text-align: center;
 }
@@ -73,7 +73,7 @@ img {
 /* ------------- ACTIVITIES SECTION --------------- */
 .activities-sec {
     display: flex;
-    flex-wrap: wrap; /* allows wrapping */
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     margin: 0;
@@ -95,9 +95,9 @@ img {
 }
 
 .activities-img {
-    margin: 1rem;
-    width: 100%; /* makes images responsive */
-    max-width: 600px; /* ensures images don't get too large */
+    margin: 2rem;
+    width: 100%;
+    max-width: 600px; 
 }
 
 .activities-img:hover {
@@ -121,7 +121,7 @@ img {
 
 /* ------------- GUIDE SECTION --------------- */
 .guide-container {
-    padding: 6rem 2rem; /* Adjust padding for responsiveness */
+    padding: 6rem 30rem;
 }
 
 .guide {
@@ -131,13 +131,11 @@ img {
     border: 5px solid #FFD60A;
     border-bottom: 50px solid #FFD60A;
     padding: 1rem;
-    flex-wrap: wrap; /* allows wrapping */
 }
 
 .guide-pro {
     border: 5px solid #FFD60A;
-    width: 100%; /* Makes image responsive */
-    max-width: 400px;
+    width: 300px;
     margin-right: 2rem;
     height: auto;
 }
@@ -163,56 +161,4 @@ img {
 .guide-name {
     font-size: 2rem;
     margin-top: 0;
-}
-
-/* ------------- MEDIA QUERIES --------------- */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem; /* Smaller font size */
-    }
-
-    .hero h2 {
-        font-size: 1rem; /* Smaller font size */
-    }
-
-    .activities-sec {
-        flex-direction: column; /* Stack images vertically */
-    }
-
-    .activities-img {
-        width: 100%; /* Full-width images on smaller screens */
-    }
-
-    .guide-container {
-        padding: 4rem 2rem; /* Reduced padding */
-    }
-
-    .guide {
-        flex-direction: column; /* Stack the guide content */
-        align-items: center;
-    }
-
-    .guide-pro {
-        margin-bottom: 2rem; /* Space between image and text */
-        width: 100%; /* Responsive image size */
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .activities-h3 {
-        font-size: 2rem; /* Adjust font size */
-    }
-
-    .guide-catch {
-        font-size: 2rem; /* Adjust font size */
-    }
-
-    .guide-des {
-        font-size: 1.2rem; /* Smaller text */
-    }
-
-    .guide-name {
-        font-size: 1.5rem; /* Smaller text */
-    }
 }
