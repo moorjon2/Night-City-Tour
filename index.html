@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         
         <!-- HERO SECTION -->
-        <div>
-            <h1>Visit Torshov</h1>
-            <h2>Enjoy culture and sports in this vibrant district close to the center of Oslo.</h2>
+        <div class="hero">
+            <div class="video-container">
+                <video id="background-video" autoplay loop muted>
+                    <source src="media/nlc-vid-loop-720p.mp4" type="video/mp4">
+                </video>
+            </div>
+            <h1>Welcome to Night City</h1>   
+            <h2>Whatever your Night City dream is, with this site to guide you, it is sure to come true.</h2>
         </div>
         
         <!-- ACTIVITIES SECTION -->
-        <div>
-            <h3>Top three activities to do at Torshov</h3>
-            <img src="images/park.jpg">
-            <img src="images/theatre.jpg">
-            <img src="images/sports.jpg">
-        </div>
-
+        <div id="main-div">
+            <h3 class="activities-h3">Top three activities to do in NC</h3>
+            <div class="activities-sec">
+                <div>
+                    <img class="activities-img" src="images/mega-rollercoaster.png">
+                    <h4 class="activities-title">Mega Ride Rollercoaster</h4>
+                    <p class="activities-des">This huge rollercoaster overlooks the coast just behind the Grand Imperial Mall</p>
+                </div>
+                <div>
+                    <img class="activities-img" src="images/arcade-cabinets.jpg">
+                    <h4 class="activities-title">Arcade Cabinets</h4>
+                    <p class="activities-des">These games are a real throwback to the vintage arcade era, and are still as playable and addictive as they ever were.</p>
+                </div>
+                <div>
+                    <img class="activities-img" src="images/totentanz.webp">
+                    <h4 class="activities-title">Totentanz</h4>
+                    <p class="activities-des">Totentanz is a hardcore club. Its heavy industrial vibe fills you with the need to unleash your pent up aggression</p>
+                </div>
+            </div>
         <!-- GUIDE SECTION -->
-        <div>
-            <h3>Your guide</h3>
-            <p>"I have lived at Torshov for over 30 years, so I can show you all of its best parts and hidden secrets."</p>
-            <h4>Per Harald Borgen</h4>
-            <img src="images/per.jpg">
+            <div class="guide-container">
+                <div class="guide">
+                    <img class="guide-pro" src="images/jackie.webp">
+                    <div class="guide-intro">
+                        <h3 class="guide-catch">Your guide</h3>
+                        <p class="guide-des"><em>"I grew up in Heywood, so I know every back alley, every dive, and every spot to get into... or outta trouble. You are gonna see the real Night City, mi choom not the polished, corpo version they sell on postcards."</em></p>
+                        <h4 class="guide-name">Jaquito "Jackie" Welles</h4>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
